@@ -1,0 +1,37 @@
+@use "colors" as *;
+
+
+.zoom-img {
+	cursor: zoom-in;
+	transform: scale(1.5);
+}
+
+//product
+.product {
+    position: relative;
+    margin-top: 80px;
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+	}
+    &__name{
+        font-size: 3rem;
+    }
+    &__img{
+        margin: 1em;
+        align-self: center;
+    }
+    &__btnBuy{
+        width: 300px;
+        align-self: center;
+        padding: 1em;
+        background-color: $light-green;
+    }
+    &__description{
+        padding: 1em;
+    }
+
+}
+
+

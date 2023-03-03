@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Store</title>
+
+    <link href="/dist/css/hamburger.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/css/style.min.css">
+    <link rel="stylesheet" href="/dist/css/product.min.css">
+    <link rel="stylesheet" href="/dist/css/cart.min.css">
+    <script src="https://kit.fontawesome.com/7d9f555cba.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container">
+        <div class="navbar__nav">
+
+            <div class="navbar__logo">
+                <a href="index.html"><i class="fa-solid fa-diamond one"></i><i class="fa-solid fa-diamond two"></i><span>Planty</span></a>
+            </div>
+    
+            <!-- dopisać butto klasy -->
+            <button class="hamburger hamburger--collapse navbar__burger-btn" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <ul class="navbar__list">
+                <li class="navbar__item"><a class="active" href="#header">Home</a></li>
+                <li class="navbar__item"><a href="#aboutus">About us</a></li>
+                <li class="navbar__item"><a href="#best-products">Best Sellers</a></li>
+                <li class="navbar__item nav-last"><a href="#contact">Contact</a></li>
+                <li class="navbar__item"><a href="shop.html">Shop</a></li>
+                <li class="navbar__item"><a href="product.html">Product Cart</a></li>
+            </ul>
+            <div class="navbar__shop">
+                <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a>
+                </i>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="cart">
+        <div class="container">
+            <div class="cart__box">
+                <p class="product__name">Twój koszyk jest pusty</p>
+                
+            </div>
+        </div>
+    </section>
+
+   
+
+
+
+    <footer class="footer">
+    <p>@ <span class="footer_year"></span> Plant Store</p>
+</footer>
+    <script src="/dist/js/main.min.js"></script>
+    <script src="/dist/js/product.min.js"></script>
+    <script src="/dist/js/cart.min.js"></script>
+</body>

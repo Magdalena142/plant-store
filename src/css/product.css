@@ -1,0 +1,12 @@
+.product__box {
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  align-self: center;
+  background-color: red;
+}
+
+.zoom-img {
+  cursor: zoom-in;
+  transform: scale(1.5);
+}/*# sourceMappingURL=product.css.map */

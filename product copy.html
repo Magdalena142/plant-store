@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Store</title>
+
+    <link href="/dist/css/hamburger.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/css/style.min.css">
+    <link rel="stylesheet" href="/dist/css/product.min.css">
+    <script src="https://kit.fontawesome.com/7d9f555cba.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="container">
+        <div class="navbar__nav">
+
+            <div class="navbar__logo">
+                <a href="index.html"><i class="fa-solid fa-diamond one"></i><i class="fa-solid fa-diamond two"></i><span>Planty</span></a>
+            </div>
+    
+            <!-- dopisać butto klasy -->
+            <button class="hamburger hamburger--collapse navbar__burger-btn" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <ul class="navbar__list">
+                <li class="navbar__item"><a class="active" href="#header">Home</a></li>
+                <li class="navbar__item"><a href="#aboutus">About us</a></li>
+                <li class="navbar__item"><a href="#best-products">Best Sellers</a></li>
+                <li class="navbar__item nav-last"><a href="#contact">Contact</a></li>
+                <li class="navbar__item"><a href="product.html">Shop</a></li>
+            </ul>
+            <div class="navbar__shop">
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-basket-shopping"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="product">
+        <div class="container">
+            <div class="product__box">
+                <p class="product__name">Sukulent green 70 cm</p>
+                <img class="product__img" src="/dist/img/sukulent.jpg" width="300" height="400" alt="kwiatek1">
+                <button class="product__btnBuy">Add to card</button>
+                <p class="product__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, facere libero similique aliquam nesciunt beatae. Quia dolore esse eveniet modi, quos possimus a praesentium minima aliquam dolores dolorem quibusdam. Nam?
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-product">
+        <div class="container">
+            <h3>More informations</h3>
+            <div class="accordion">
+                <div class="accordion__box">
+                    <button class="accordion__btn">
+                        <i class="fa-solid fa-question"></i>
+                        How to ....
+                    </button>
+                    <div class="accordion__info">
+                        <p class="accordion__info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Asperiores dicta nobis incidunt accusamus quo obcaecati, atque alias recusandae esse
+                            magni!</p>
+                    </div>
+                </div>
+                <div class="accordion__box">
+                    <button class="accordion__btn">
+                        <i class="fa-solid fa-question"></i>
+                        How to ....
+                    </button>
+                    <div class="accordion__info">
+                        <p class="accordion__info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Asperiores dicta nobis incidunt accusamus quo obcaecati, atque alias recusandae esse
+                            magni!</p>
+                    </div>
+                </div>
+                <div class="accordion__box">
+                    <button class="accordion__btn">
+                        <i class="fa-solid fa-question"></i>
+                        How to ....
+                    </button>
+                    <div class="accordion__info">
+                        <p class="accordion__info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Asperiores dicta nobis incidunt accusamus quo obcaecati, atque alias recusandae esse
+                            magni!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+    <p>@ <span class="footer_year"></span> Plant Store</p>
+</footer>
+    <script src="/dist/js/main.min.js"></script>
+    <script src="/dist/js/product.min.js"></script>
+</body>

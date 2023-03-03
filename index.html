@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planty</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+
+    <link href="/dist/css/hamburger.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/css/style.min.css">
+    <script src="https://kit.fontawesome.com/7d9f555cba.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="main-page">
+    <nav class="navbar">
+    <div class="container">
+        <div class="navbar__nav">
+
+            <div class="navbar__logo">
+                <a href="index.html"><i class="fa-solid fa-diamond one"></i><i class="fa-solid fa-diamond two"></i><span>Planty</span></a>
+            </div>
+    
+            <!-- dopisać butto klasy -->
+            <button class="hamburger hamburger--collapse navbar__burger-btn" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <ul class="navbar__list">
+                <li class="navbar__item"><a class="active" href="#header">Home</a></li>
+                <li class="navbar__item"><a href="#aboutus">About us</a></li>
+                <li class="navbar__item"><a href="#best-products">Best Sellers</a></li>
+                <li class="navbar__item nav-last"><a href="#contact">Contact</a></li>
+                <li class="navbar__item"><a href="shop.html">Shop</a></li>
+                <li class="navbar__item"><a href="product.html">Product Cart</a></li>
+            </ul>
+            <div class="navbar__shop">
+                <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a>
+                </i>
+            </div>
+        </div>
+    </div>
+</nav>
+    <!-- <header class="header" id="header">
+        <div class="header__text">
+            <h1>Make your home<br>a greener place</h1>
+            <p class="header__text-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, odit.</p>
+        </div>
+    </header> -->
+    <header class="header scrollspy scroll-fix" id="header">
+        <div class="container">
+            <div class="header__box">
+                <div class="header__text">
+                    <h1>Make your home<br>a greener place <img src="/dist/img/lisc2.png" width="30" height="30" alt="">
+                    </h1>
+                    <p class="header__text-p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident cum
+                        quas eos laudantium, illo quo.</p>
+                </div>
+                <button class="header__btn">
+                    <p class="header__btn-text">View gallery</p> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <div class="header__advantages">
+                    <div class="header__advantages--one">
+                        <p class="title">1000+ plants</p>
+                        <p>Huge selection, we offer both popular and exotic plant spacies for your interior.</p>
+                    </div>
+                    <div class="header__advantages--two">
+                        <p class="title">Fast delivery</p>
+                        <p>Huge selection, we offer both popular and exotic plant spacies for your interior.</p>
+                    </div>
+                </div>
+                <div class="header__advantages--articles">
+                    <p class="title">Articles from the experts</p>
+                    <p>Huge selection, we offer both popular and <br>exotic plant spacies for your interior.</p>
+                    <img src="/dist/img/plant-ok.png" alt="">
+                </div>
+            </div>
+            <div class="header__img">
+                <img src="/dist/img/monstera-ok.png" alt="kwiat monstera">
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main">
+        <section class="numbers" id="numbers">
+            <div class="container">
+                <div class="counter__box">
+                    <img class="counter__box-item" src="/dist/img/plant4.png" alt="" width="150px">
+                    <p class="counter__box-item">Trusted by Over 430,000+ Clients Worldwide Since 2008</p>
+                    <div class="counter__box-item">
+                        <div class="counter" data-number="7500">0</div>
+                        <p>Worldwide sale per year</p>
+                    </div>
+                    <div class="counter__box-item">
+                        <div class="counter" data-number="2550">0</div>
+                        <p>Worldwide sale per year</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="aboutus scrollspy scroll-fix" id="aboutus">
+            <div class="container">
+                <h2 class="section-title">About us</h2>
+                <h3>The best plant store</h3>
+                <div class="aboutus-box">
+                    <div class="aboutus-box__text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, molestiae!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae rerum enim accusantium
+                            perspiciatis aliquam aperiam officiis obcaecati corrupti assumenda molestias.
+                            <span>dżungle!</span></p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat optio odit adipisci cum, quas
+                            ad? </p>
+                    </div>
+                    <img class="aboutus-box__img" src="/dist/img/header2-big.jpg" width="500" height="300" alt="dzungla"
+                        class="aboutus-box__img">
+                </div>
+            </div>
+        </section>
+        <section class="best-products scrollspy scroll-fix" id="best-products">
+            <div class="container">
+                <h2 class="section-title">Best sellers</h2>
+                <div class="best-products__slider">
+                    <div class="best-products__slider-product">
+                        <img class="best-products__slider-product-img" src="/dist/img/sukulent.jpg" width="200"
+                            height="300" alt="kwiatek1">
+                        <a href="product.html">
+                            <p class="best-products__slider-product-name">Sukulent</p>
+                            <p class="best-products__slider-product-cost">50 zł</p>
+                        </a>
+                    </div>
+                    <div class="best-products__slider-product">
+                        <img class="best-products__slider-product-img" src="/dist/img/sukulent.jpg" width="200"
+                            height="300" alt="kwiatek1">
+                        <a href="product.html">
+                            <p class="best-products__slider-product-name">Sukulent</p>
+                            <p class="best-products__slider-product-cost">50 zł</p>
+                        </a>
+                    </div>
+                    <div class="best-products__slider-product">
+                        <img class="best-products__slider-product-img" src="/dist/img/sukulent.jpg" width="200"
+                            height="300" alt="kwiatek1">
+                        <a href="product.html"></a>
+                        <p class="best-products__slider-product-name">Sukulent</p>
+                        <p class="best-products__slider-product-cost">50 zł</p>
+                        </a>
+                    </div>
+                    <div class="best-products__slider-product">
+                        <img class="best-products__slider-product-img" src="/dist/img/sukulent.jpg" width="200"
+                            height="300" alt="kwiatek1">
+                        <a href="product.html"></a>
+                        <p class="best-products__slider-product-name">Sukulent</p>
+                        <p class="best-products__slider-product-cost">50 zł</p>
+                        </a>
+                    </div>
+                    <div class="best-products__slider-product">
+                        <img class="best-products__slider-product-img" src="/dist/img/sukulent.jpg" width="200"
+                            height="300" alt="kwiatek1">
+                        <p class="best-products__slider-product-name">Sukulent</p>
+                        <p class="best-products__slider-product-cost">50 zł</p>
+                    </div>
+                    <div class="best-products__slider-product">
+                        <img class="best-products__slider-product-img" src="/dist/img/sukulent.jpg" width="200"
+                            height="300" alt="kwiatek1">
+                        <p class="best-products__slider-product-name">Sukulent</p>
+                        <p class="best-products__slider-product-cost">50 zł</p>
+                    </div>
+                    <div class="best-products__slider-product">
+                        <img class="best-products__slider-product-img" src="/dist/img/sukulent.jpg" width="200"
+                            height="300" alt="kwiatek1">
+                        <p class="best-products__slider-product-name">Sukulent</p>
+                        <p class="best-products__slider-product-cost">50 zł</p>
+                    </div>
+                </div>
+                <button class="btn btn-left"><span>&lt;</span></button>
+                <button class="btn btn-right"><span>&gt;</span></button>
+
+            </div>
+        </section>
+        <section class="contact scrollspy scroll-fix" id="contact">
+            <div class="container">
+                <h2 class="section-title">Kontakt</h2>
+                <div class="container-contact">
+                    <div class="contact__box">
+                        <div class="contact__details">
+                            <div class="contact__details-title">
+                                <h3>Napisz do nas</h3>
+                                <p>Chcesz o coś zapytać?</p>
+                            </div>
+                            <p><a href="#"></a>kontakt@plant-store</p>
+                        </div>
+                        <form action="mail.php" method="post" class="contact__form">
+                            <div class="contact__box">
+                                <input type="text" class="contact__input" id="contact-name">
+                                <label for="contact-name" class="contact__label">Imię</label>
+                            </div>
+                            <div class="contact__box">
+                                <input type="text" class="contact__input" id="contact-mail">
+                                <label for="contact-mail" class="contact__label">Adres mailowy</label>
+                            </div>
+                            <div class="contact__box">
+                                <input type="text" class="contact__input" id="contact-subject">
+                                <label for="contact-subject" class="contact__label">Temat</label>
+                            </div>
+                            <div class="contact__box">
+                                <textarea name="contact-msg" id="msg" class="contact__textarea"></textarea>
+                                <label for="contact-msg" class="contact__label">Treść wiadomości</label>
+                            </div>
+                            <button class="contact__btn" type="submit" name="contact-submit">Wyślij</button>
+                        </form>
+
+                        <p class="privacy-policy">Wypełnienie formularza oznacza, że podane w nim dane osobowe będą
+                            przetwarzane
+                            w celu udzielenia odpowiedzi. Jeśli Twoje pytanie będzie odnosić się do naszych usług, w
+                            odpowiedzi
+                            możemy przedstawić Ci ofertę. Dowiedz się, jak przetwarzamy Twoje dane.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact__map">
+                <img src="/dist/img/monstera.png" alt="">
+            </div>
+        </section>
+    </main>
+    <div class="cookie-alert">
+        <div class="container">
+            <p>Na stronie wykorzystujemy pliki cookies. Więcej informacji znajdziesz w <a href="#">polityce
+                    prywatności</a>.</p>
+            <button class="cookie-btn">Akceptuj 🍪!</button>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+    <p>@ <span class="footer_year"></span> Plant Store</p>
+</footer>
+
+
+    <script src="/dist/js/main.min.js"></script>
+</body>
+
+</html>
