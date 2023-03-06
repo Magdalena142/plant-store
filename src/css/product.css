@@ -1,12 +1,29 @@
-.product__box {
-  width: 300px;
-  height: 400px;
-  overflow: hidden;
-  align-self: center;
-  background-color: red;
-}
-
 .zoom-img {
   cursor: zoom-in;
   transform: scale(1.5);
+}
+
+.product {
+  position: relative;
+  margin-top: 80px;
+}
+.product__box {
+  display: flex;
+  flex-direction: column;
+}
+.product__name {
+  font-size: 3rem;
+}
+.product__img {
+  margin: 1em;
+  align-self: center;
+}
+.product__btnBuy {
+  width: 300px;
+  align-self: center;
+  padding: 1em;
+  background-color: #82C74D;
+}
+.product__description {
+  padding: 1em;
 }/*# sourceMappingURL=product.css.map */
