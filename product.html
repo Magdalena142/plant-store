@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plant Store</title>
 
-    <link href="/dist/css/hamburger.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/css/style.min.css">
-    <link rel="stylesheet" href="/dist/css/product.min.css">
+    <link href="dist/css/hamburger.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.min.css">
+    <link rel="stylesheet" href="dist/css/product.min.css">
     <script src="https://kit.fontawesome.com/7d9f555cba.js" crossorigin="anonymous"></script>
 </head>
 
@@ -30,19 +30,17 @@
             </button>
 
             <ul class="navbar__list">
-                <li class="navbar__item"><a class="active" href="#header">Home</a></li>
-                <li class="navbar__item"><a href="#aboutus">About us</a></li>
-                <li class="navbar__item"><a href="#best-products">Best Sellers</a></li>
-                <li class="navbar__item nav-last"><a href="#contact">Contact</a></li>
+                <li class="navbar__item"><a class="active" href="index.html#header">Home</a></li>
+                <li class="navbar__item"><a href="index.html#aboutus">About us</a></li>
+                <li class="navbar__item"><a href="index.html#best-products">Best Sellers</a></li>
+                <li class="navbar__item nav-last"><a href="index.html#contact">Contact</a></li>
                 <li class="navbar__item"><a href="shop.html">Shop</a></li>
-                <li class="navbar__item"><a href="product.html">Product Cart</a></li>
             </ul>
             <!-- Login and shop Icon -->
             <div class="navbar__shop">
                 <a href="login.html"><i class="fa-solid fa-user"></i></a>
-                <!-- <a href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a>
-                </i> -->
                 <i class="fa-solid fa-basket-shopping" id="cart-icon"></i>
+                <div class="counterItems">0</div>
             </div>
             <!-- Cart -->
             <div class="cart">
@@ -65,22 +63,41 @@
                     <div class="total-price">$0</div>
                 </div>
                 <!-- Buy Button -->
-                <button type="button" class="btn-buy">Buy Now</button>
+                <a href="buy.html"><button type="button" class="btn-buy">Buy Now</button></a>
                 <!-- Cart Close -->
-                <i class="fa-solid fa-xmark" id="close-cart"></i>
+                <i class="fa-solid fa-xmark close-cart" id="close-cart"></i>
             </div>
         </div>
     </div>
 </nav>
-    <section class="product">
+    <!-- s-single -->
+    <section class="sproduct">
         <div class="container">
-            <div class="product__box">
-                <p class="product__name">Sukulent green 70 cm</p>
-                <img class="product__img" src="/dist/img/sukulent.jpg" width="300" height="400" alt="kwiatek1">
-                <button class="product__btnBuy">Add to card</button>
-                <p class="product__description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, facere libero similique aliquam nesciunt beatae. Quia dolore esse eveniet modi, quos possimus a praesentium minima aliquam dolores dolorem quibusdam. Nam?
-                </p>
+            <div class="sproduct__box">
+                <div class="images-box">
+                    <img src="dist/img/sukulent.jpg" class="product-img" alt="">
+                    <div class="images">
+                        <img src="dist/img/sukulent.jpg" class="small-img" alt="">
+                        <img src="dist/img/monstera.png" class="small-img" alt="">
+                        <img src="dist/img/plant-ok.png" class="small-img" alt="">
+                    </div>
+                </div>
+                <div class="sproduct-details">
+                    <h2 class="product-title">Sukulent</h2>
+                    <span class="product-price">$25</span>
+                    <select class="select-size">
+                        <option>Large</option>
+                        <option>Medium</option>
+                        <option>Small</option>
+                    </select>
+                    <input type="number" value="1">
+                    <p class="product-info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, veritatis
+                        saepe
+                        impedit dolorem distinctio corrupti tenetur nobis explicabo reprehenderit et minus totam dicta
+                        vel?
+                        Minima dolorem atque illo facere distinctio?</p>
+                </div>
+                <button class="product-add-cart sproduct-buy">Add To Cart</button>
             </div>
         </div>
     </section>
@@ -125,7 +142,9 @@
             </div>
         </div>
     </section>
-
+    <div class="add-product-alert">
+    <p>Product added to cart</p>
+</div>
 
     <div class="cookie-alert">
     <div class="container">
@@ -137,6 +156,7 @@
     <footer class="footer">
     <p>@ <span class="footer_year"></span> Plant Store</p>
 </footer>
-    <script src="/dist/js/main.min.js"></script>
-    <script src="/dist/js/product.min.js"></script>
+    <script src="dist/js/main.min.js"></script>
+    <script src="dist/js/product.min.js"></script>
+    <script src="dist/js/cart.min.js"></script>
 </body>

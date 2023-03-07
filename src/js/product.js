@@ -1,12 +1,19 @@
 const accordion = document.querySelector(".accordion")
 const accordionBtns = document.querySelectorAll(".accordion__btn")
 const productImg = document.querySelector("img")
-const btnBuy=document.querySelector('.product__btnBuy')
+const smallImages=document.querySelectorAll(".small-img")
+const bigImages=document.querySelector(".product-img")
+
 
 
 let countBuy=0
 let itemsToBuy=[]
 
+
+// Change Product IMG
+const changeProductImg=(e)=>{
+	bigImages.src=e.srcElement.src
+}
 const zoomImg = e => {
 	const x = e.clientX
 	const y = e.clientY
@@ -53,16 +60,17 @@ const clickOutsideAccordion = e => {
 	closeAccordionItems()
 }
 
-const addToCart=e=>{
-	countBuy++
-	let newDiv=document.createElement('div')
+// const addToCart=e=>{
+// 	countBuy++
+// 	let newDiv=document.createElement('div')
 
-}
+// }
 
 accordionBtns.forEach(btn => btn.addEventListener("click", openAccordionItems))
 window.addEventListener("click", clickOutsideAccordion)
 
+smallImages.forEach(img=>img.addEventListener('click',changeProductImg))
+
 //productImg.addEventListener("mousemove", zoomImg)
 //productImg.addEventListener("mouseout", resetImg)
 
-btnBuy.addEventListener('click', addToCart)

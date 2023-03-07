@@ -2,9 +2,28 @@
   margin-top: 80px;
 }
 
-.shop-content {
+.shop-container {
+  display: flex;
+}
+.shop-container .filter {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+.shop-container .filter .buttons-box {
+  display: flex;
+  flex-direction: column;
+}
+.shop-container .filter .buttons-box .button-value {
+  font-size: 2rem;
+  padding: 1em;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.shop-container .shop-content {
+  width: 80%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
   gap: 1.5rem;
 }
 
@@ -16,7 +35,12 @@
   margin-top: 1rem;
 }
 
+.hide {
+  display: none;
+}
+
 .product-box {
+  max-width: 300px;
   position: relative;
   margin: 1rem;
   transition: padding 0.4s, border 0.4s;
@@ -27,7 +51,7 @@
 }
 .product-img {
   width: 100%;
-  height: auto;
+  height: 250px;
   margin-bottom: 0.5rem;
 }
 .product-title {
@@ -50,4 +74,19 @@
 }
 .product-add-cart:hover {
   background: hsl(152, 33%, 17%);
+}
+
+.add-product-alert {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  bottom: 0;
+  right: -100%;
+  background-color: white;
+  color: black;
+  border-radius: 10px 0;
+  box-shadow: inset 1px 1px 7px 2px #000;
 }/*# sourceMappingURL=shop.css.map */

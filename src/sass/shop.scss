@@ -3,33 +3,76 @@
 .shop {
 	margin-top: 80px;
 }
+#search-container {
+	display: flex;
+	margin-bottom: 1em;
 
-.shop-content {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-	gap: 1.5rem;
+	#search-input {
+		display: flex;
+		padding: 1em;
+		border: 1px solid $dark-green;
+		border-right: none;
+	}
+	#search {
+		display: flex;
+		padding: 1.5em;
+		background-color: $light-green;
+		border: 1px solid $dark-green;
+	}
 }
-.cart-box {
-	display: grid;
-	grid-template-columns: 32% 50% 18%;
-	align-items: center;
-	gap: 1rem;
-	margin-top: 1rem;
+.shop-container {
+	display: flex;
+
+	.filter {
+		width: 20%;
+		display: flex;
+		flex-direction: column;
+
+		.buttons-box {
+			display: flex;
+			flex-direction: column;
+
+			.button-value {
+				font-size: 1.5rem;
+				font-weight: 600;
+				margin: 0.2em;
+				padding: 1em;
+				text-align: left;
+				border: 1px solid $dark-green;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+			.button-value:hover {
+				background-color: $light-green;
+			}
+		}
+	}
+	.shop-content {
+		width: 80%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+		gap: 1.5rem;
+	}
 }
+
+.hide {
+	display: none;
+}
+
 .product {
 	&-box {
 		position: relative;
-		margin: 1rem;
 		transition: padding 0.4s, border 0.4s;
 	}
-	&-box:hover {
+
+	&-img {
+		height: 280px;
+		width: 100%;
+		margin-bottom: 0.5rem;
+	}
+	&-img:hover {
 		padding: 10px;
 		border: 1px solid black;
-	}
-	&-img {
-		width: 100%;
-		height: auto;
-		margin-bottom: 0.5rem;
 	}
 	&-title {
 		font-size: 1.1rem;
@@ -37,7 +80,7 @@
 		text-transform: uppercase;
 		margin-bottom: 0.5rem;
 	}
-	&-price{
+	&-price {
 		font-weight: 600;
 	}
 	&-add-cart {
@@ -53,14 +96,14 @@
 		background: hsl(152, 33%, 17%);
 	}
 }
-.add-product-alert{
+.add-product-alert {
 	position: fixed;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 300px;
 	height: 50px;
-	bottom:0;
+	bottom: 0;
 	right: -100%;
 	background-color: white;
 	color: black;

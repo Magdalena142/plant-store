@@ -1,105 +1,145 @@
-//Cart Working JS
-// if (document.readyState == "loading") {
-// 	document.addEventListener("DOMContentLoaded, ready")
-// } else {
-// 	ready()
-// }
-ready()
-// Making Function
-function ready() {
-	// Removes Items From Cart
-	const removeCartButtons = document.querySelectorAll(".cart-remove")
-	removeCartButtons.forEach(button => {
-		button.addEventListener("click", removeCartItem)
+let products = {
+	data: [
+		{
+			productName: "Sukulent Green",
+			category: "Sukulenty",
+			price: "30",
+			image: "dist/img/sukulent.jpg",
+		},
+		{
+			productName: "Palma Chamedora",
+			category: "Zielone",
+			price: "49",
+			image: "dist/img/chamedora.png",
+		},
+		{
+			productName: "Monstera",
+			category: "Zielone",
+			price: "99",
+			image: "dist/img/monstera-ok.png",
+		},
+		{
+			productName: "Palma Chamedora",
+			category: "Zielone",
+			price: "49",
+			image: "dist/img/chamedora.png",
+		},
+		{
+			productName: "Monstera",
+			category: "Zielone",
+			price: "99",
+			image: "dist/img/monstera-ok.png",
+		},
+		{
+			productName: "Palma Chamedora",
+			category: "Zielone",
+			price: "49",
+			image: "dist/img/chamedora.png",
+		},
+		{
+			productName: "Monstera",
+			category: "Zielone",
+			price: "99",
+			image: "dist/img/monstera-ok.png",
+		},
+		{
+			productName: "Sukulent Green",
+			category: "Sukulenty",
+			price: "30",
+			image: "dist/img/sukulent.jpg",
+		},
+	],
+}
+for (let i of products.data) {
+	// Create box
+	let productBox = document.createElement("div")
+	productBox.classList.add("product-box", i.category, "hide")
+	// a tag
+	let a = document.createElement("a")
+	a.setAttribute("href", "product.html")
+	// Image tag
+	let image = document.createElement("img")
+	image.classList.add("product-img")
+	image.setAttribute("src", i.image)
+
+	a.appendChild(image)
+	productBox.appendChild(a)
+
+	// product name
+	let nameProduct = document.createElement("h2")
+	nameProduct.classList.add("product-title")
+	nameProduct.innerText = i.productName.toUpperCase()
+	productBox.appendChild(nameProduct)
+
+	//price
+	let price = document.createElement("span")
+	price.innerText = "$" + i.price
+	price.classList.add("product-price")
+	productBox.appendChild(price)
+	
+	//Buy icon
+	let buyIcon=document.createElement("i")
+	buyIcon.classList.add("product-add-cart","fa-solid","fa-cart-shopping")
+	productBox.appendChild(buyIcon)
+
+	//append 
+	document.querySelector(".shop-content").appendChild(productBox)
+}
+
+// parameter passed from button (Parametre same as category)
+function filterProduct(value) {
+	//Button class node
+	let buttons = document.querySelectorAll(".button-value")
+	buttons.forEach(button => {
+		//check if value equals innerText
+		if (value.toUpperCase() == button.innerText.toUpperCase()) {
+			button.classList.add("active")
+		} else {
+			button.classList.remove("active")
+		}
 	})
 
-	// Quantity Changes
-	const quantityInputs = document.querySelectorAll(".cart-quantity")
-	quantityInputs.forEach(quantityInput => {
-		quantityInput.addEventListener("change", quantityChanged)
+	//sselect all cards
+	let elements = document.querySelectorAll(".product-box")
+	//loop through all cards
+	elements.forEach(element => {
+		//display all cards on 'all' button click
+		if (value == "all") {
+			element.classList.remove("hide")
+		} else {
+			//Check if element contains category class
+			if (element.classList.contains(value)) {
+				//display element based on category
+				element.classList.remove("hide")
+			} else {
+				//hide other elements
+				element.classList.add("hide")
+			}
+		}
 	})
+}
+//Search button click
+document.getElementById("search").addEventListener("click", () => {
+	//initialiazations
+	let searchInput = document.getElementById("search-input").value
+	let elements = document.querySelectorAll(".product-title")
+	let productBox = document.querySelectorAll(".product-box")
 
-	// Add To Cart
-	const addCarts = document.querySelectorAll(".product-add-cart")
-	addCarts.forEach(addCart => addCart.addEventListener("click", addCartClicked))
+	//loop through all products
+	elements.forEach((element, index) => {
+		//check if text includes the search value
+		if (element.innerText.includes(searchInput.toUpperCase())) {
+			//display matching card
+			productBox[index].classList.remove("hide")
+		} else {
+			//hide others
+			productBox[index].classList.add("hide")
+		}
+	})
+})
+
+// Initially display all products
+window.onload=()=>{
+	filterProduct('all')
 }
 
-// Removes Items From Cart
-function removeCartItem(e) {
-	const buttonClicked = e.target
-	buttonClicked.parentElement.remove()
-	updateTotal()
-}
-
-// Quantity Changes
-function quantityChanged(e) {
-	const input = e.target
-	if (isNaN(input.value) || input.value <= 0) {
-		input.value = 1
-	}
-	updateTotal()
-}
-// Add To Cart
-function addCartClicked(e) {
-	const button = e.target
-	const shopProduct = button.parentElement
-	const title = shopProduct.querySelector(".product-title").innerText
-	const price = shopProduct.querySelector(".product-price").innerText
-	const productImg = shopProduct.querySelector(".product-img").src
-	addProductToCart(title, price, productImg)
-	updateTotal()
-    showAddedProductAlert()
-}
-
-function showAddedProductAlert(){
-    const AddProductAlert=document.querySelector('.add-product-alert')
-    AddProductAlert.style.right=0
-    setTimeout(HideAddedProductAlert,"2000")
-}
-
-function HideAddedProductAlert(){
-    const AddProductAlert=document.querySelector('.add-product-alert')
-    AddProductAlert.style.right="-100%"
-}
-
-
-function addProductToCart(title, price, productImg) {
-	const cartShopBox = document.createElement("div")
-	cartShopBox.classList.add("cart-box")
-	const cartItems = document.querySelector(".cart-content")
-	const cartBoxContent = `
-                        <img src="${productImg}" alt="" class="cart-img">
-						<div class="detail-box">
-							<div class="cart-product-title">${title}</div>
-							<div class="cart-price">${price}</div>
-							<input type="number" value="1" class="cart-quantity">
-						</div>
-						<!-- Remove Cart -->
-						<i class="fa-solid fa-trash cart-remove"></i>`
-	cartShopBox.innerHTML = cartBoxContent
-	cartItems.append(cartShopBox)
-	cartShopBox
-		.querySelector(".cart-remove")
-		.addEventListener("click", removeCartItem)
-	cartShopBox
-		.querySelector(".cart-quantity")
-		.addEventListener("change", quantityChanged)
-}
-
-function updateTotal() {
-    let cartContent = document.querySelector(".cart-content")
-	let cartBoxes = cartContent.querySelectorAll(".cart-box")
-	let total = 0
-	for (let i = 0; i < cartBoxes.length; i++) {
-		let cartBox = cartBoxes[i]
-		let priceElement = cartBox.querySelector(".cart-price")
-		let quantityElement = cartBox.querySelector(".cart-quantity")
-		let price = parseFloat(priceElement.innerText.replace("$", ""))
-		let quantity = quantityElement.value
-		total = total + price * quantity
-	}
-	// If price Contain some Cents Value
-	total = Math.round(total * 100) / 100
-
-	document.querySelector(".total-price").innerText = "$" + total
-}
