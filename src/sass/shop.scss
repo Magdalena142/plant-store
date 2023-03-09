@@ -22,21 +22,23 @@
 }
 .shop-container {
 	display: flex;
+	flex-direction: column;
 
 	.filter {
 		width: 20%;
 		display: flex;
 		flex-direction: column;
+		margin-right: 1em;
 
 		.buttons-box {
 			display: flex;
-			flex-direction: column;
+			margin-bottom: 1em;
 
 			.button-value {
 				font-size: 1.5rem;
 				font-weight: 600;
 				margin: 0.2em;
-				padding: 1em;
+				padding: 1em 2em;
 				text-align: left;
 				border: 1px solid $dark-green;
 				border-radius: 5px;
@@ -97,3 +99,22 @@
 	}
 }
 
+@media (min-width:768px){
+	.shop-container {
+		display: flex;
+		flex-direction: row;
+	
+		.filter {
+			width: 20%;
+			display: flex;
+			flex-direction: column;
+	
+			.buttons-box {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	
+	}
+
+}
